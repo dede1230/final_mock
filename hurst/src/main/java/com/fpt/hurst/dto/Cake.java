@@ -99,4 +99,8 @@ public class Cake {
 		this.updateAt = updateAt;
 	}
 
+	public Cake() {
+		super();
+	}
+
 }
