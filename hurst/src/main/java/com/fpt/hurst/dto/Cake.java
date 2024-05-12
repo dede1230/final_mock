@@ -7,7 +7,7 @@ public class Cake {
 	private String name;
 	private double price;
 	private String description;
-	private String infomation;
+	private String information;
 	private String image;
 	private int likes;
 	private Date createAt;
@@ -45,12 +45,12 @@ public class Cake {
 		this.description = description;
 	}
 
-	public String getInfomation() {
-		return infomation;
+	public String getInformation() {
+		return information;
 	}
 
-	public void setInfomation(String infomation) {
-		this.infomation = infomation;
+	public void setInformation(String information) {
+		this.information = information;
 	}
 
 	public String getImage() {
@@ -85,22 +85,11 @@ public class Cake {
 		this.updateAt = updateAt;
 	}
 
-	public Cake(int id, String name, double price, String description, String infomation, String image, int likes,
-			Date createAt, Date updateAt) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.price = price;
-		this.description = description;
-		this.infomation = infomation;
-		this.image = image;
-		this.likes = likes;
-		this.createAt = createAt;
-		this.updateAt = updateAt;
+	@Override
+	public String toString() {
+		return "Cake [id=" + id + ", name=" + name + ", price=" + price + ", description=" + description
+				+ ", information=" + information + ", image=" + image + ", likes=" + likes + ", createAt=" + createAt
+				+ ", updateAt=" + updateAt + "]";
 	}
-
-	public Cake() {
-		super();
-	}
-
+	
 }
