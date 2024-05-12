@@ -18,4 +18,8 @@ public class CakeService {
 		return cakeMapper.getCakelist();
 	}
 
+	public Cake getCake(int id) {
+		return cakeMapper.getCakeById(id);
+	}
+
 }

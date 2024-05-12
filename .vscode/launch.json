@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-HurstApplication<hurst>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.fpt.hurst.HurstApplication",
+            "projectName": "hurst",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
