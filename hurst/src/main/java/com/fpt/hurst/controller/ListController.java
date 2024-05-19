@@ -8,11 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import com.fpt.hurst.dto.Cake;
 import com.fpt.hurst.service.CakeService;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -24,10 +24,11 @@ public class ListController {
     private static final Logger logger = LogManager.getLogger(ListController.class);
 
 	@GetMapping("/cakelist")
-	public String index(Model model) {
+	public String index(Model model, @ModelAttribute(name = "cake") Cake cake) {
 		List<Cake> cakelist = cakeService.getCakelist();
 		model.addAttribute("cakelist", cakelist);
 		logger.info(cakeService.getCakelist().size());
+		model.addAttribute("cake", cake);
 		return "cakelist";
 	}
 
