@@ -14,8 +14,8 @@ public class CakeService {
 	@Autowired
 	private CakeMapper cakeMapper;
 
-	public List<Cake> getCakelist() {
-		return cakeMapper.getCakelist();
+	public List<Cake> getCakelist(Cake cake) {
+		return cakeMapper.getCakeList(cake);
 	}
 
 	public Cake getCake(int id) {

@@ -330,12 +330,26 @@
 							<div class="product-option mb-30 clearfix">
 								<!-- Categories start -->
 								<div class="floatleft">
-									<form th:action="@{/cakelist}" method="GET" th:object="${cake}"
+									<!-- <form action="/cakelist" method="GET" 
 										class="d-inline-block" id="cakeForm">
 										<div class="input-group">
 											<input type="text" class="form-control" placeholder="Cake name"
 												aria-label="Cake name" aria-describedby="basic-addon"
-												th:field="*{name}">
+												name="name">
+											<div class="input-group-append">
+												<span class="input-group-text bg-primary text-white" id="basic-addon"
+													type="submit"
+													onclick="document.getElementById('cakeForm').submit();">Search</span>
+											</div>
+										</div>
+									</form> -->
+
+									<form th:action="@{/cakelist}" method="GET" 
+										class="d-inline-block" id="cakeForm">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="Cake name"
+												aria-label="Cake name" aria-describedby="basic-addon"
+												name="name">
 											<div class="input-group-append">
 												<span class="input-group-text bg-primary text-white" id="basic-addon"
 													type="submit"

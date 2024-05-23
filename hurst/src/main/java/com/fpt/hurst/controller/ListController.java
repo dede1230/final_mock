@@ -24,10 +24,10 @@ public class ListController {
     private static final Logger logger = LogManager.getLogger(ListController.class);
 
 	@GetMapping("/cakelist")
-	public String index(Model model, @ModelAttribute(name = "cake") Cake cake) {
-		List<Cake> cakelist = cakeService.getCakelist();
+	public String index(Model model, @ModelAttribute Cake cake) {
+		List<Cake> cakelist = cakeService.getCakelist(cake);
 		model.addAttribute("cakelist", cakelist);
-		logger.info(cakeService.getCakelist().size());
+		logger.info(cake.getName());
 		model.addAttribute("cake", cake);
 		return "cakelist";
 	}
